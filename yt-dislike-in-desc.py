@@ -11,7 +11,7 @@ do_description = True
 do_unlisted = False
 
 #VideoID = "dQw4w9WgXcQ" # rickroll
-VideoID = "WVl4rh9Gj3g" # knatterton test
+VideoID = "xoKtH5nE-dY" # Demo video
 
 credentials = None
 
@@ -75,11 +75,9 @@ def main():
         videoIds = []
         for video in playlist:
             videoIds.append(video['contentDetails']['videoId'])
-        print(videoIds)
         
         for id in videoIds:
             video = get_video_info(id)
-            print(video)
             snippet = video['items'][0]['snippet']
             statistics = video['items'][0]['statistics']
             privacyStatus = video['items'][0]['status']['privacyStatus']
